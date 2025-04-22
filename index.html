@@ -90,7 +90,6 @@
         .theme-toggle:hover {
             transform: scale(1.1);
         }
-        /* Стили для слайдера */
         .slider-container {
             position: relative;
             overflow: hidden;
@@ -98,14 +97,14 @@
         }
         .slider-track {
             display: flex;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             will-change: transform;
         }
         .slider-item {
             flex: 0 0 calc(50% - 2rem);
             min-width: calc(50% - 2rem);
             margin: 0 1rem;
-            transition: opacity 0.3s ease;
+            height: auto;
         }
         .slider-controls {
             position: absolute;
@@ -135,6 +134,16 @@
             background: rgba(245, 158, 11, 0.9);
             color: #1a1a2e;
         }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 200px);
+            padding: 1.5rem;
+        }
+        .card-text {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
         @media (max-width: 640px) {
             .project-image {
                 height: 150px;
@@ -152,6 +161,10 @@
             .slider-item {
                 flex: 0 0 calc(100% - 2rem);
                 min-width: calc(100% - 2rem);
+            }
+            .card-content {
+                height: calc(100% - 150px);
+                padding: 1rem;
             }
         }
         .footer-block {
@@ -228,12 +241,14 @@
                 <div class="slider-track" id="sliderTrack">
                     <!-- Project 1 -->
                     <div class="slider-item">
-                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale">
+                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
                             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Одноэтажный дом" class="project-image">
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-bold mb-2">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока</h3>
-                                <p class="opacity-80 mb-4 text-sm sm:text-base">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока 300мм, утепления 100мм и декоративной штукатурки типа "Короед".</p>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока 300мм, утепления 100мм и декоративной штукатурки типа "Короед".</p>
+                                </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-amber-500">1.500.000 руб.</span>
                                     <button class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-full transition duration-300 text-sm min-h-[40px]">
@@ -246,12 +261,14 @@
 
                     <!-- Project 2 -->
                     <div class="slider-item">
-                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale">
+                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
                             <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Двухэтажный дом" class="project-image">
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-bold mb-2">Проект двухэтажного коттеджа с гаражом</h3>
-                                <p class="opacity-80 mb-4 text-sm sm:text-base">Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением. Материалы: кирпич, утепление, вентилируемый фасад.</p>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Проект двухэтажного коттеджа с гаражом</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением. Материалы: кирпич, утепление, вентилируемый фасад.</p>
+                                </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-amber-500">2.800.000 руб.</span>
                                     <button class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-full transition duration-300 text-sm min-h-[40px]">
@@ -264,12 +281,14 @@
 
                     <!-- Project 3 -->
                     <div class="slider-item">
-                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale">
+                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
                             <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Современный дом" class="project-image">
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-bold mb-2">Современный дом с плоской крышей</h3>
-                                <p class="opacity-80 mb-4 text-sm sm:text-base">Минималистичный дизайн, панорамное остекление, использование современных материалов. Площадь 180 м²</p>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Современный дом с плоской крышей</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Минималистичный дизайн, панорамное остекление, использование современных материалов. Площадь 180 м²</p>
+                                </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-amber-500">3.200.000 руб.</span>
                                     <button class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-full transition duration-300 text-sm min-h-[40px]">
@@ -282,12 +301,14 @@
 
                     <!-- Project 4 -->
                     <div class="slider-item">
-                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale">
+                        <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
                             <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Дом в классическом стиле" class="project-image">
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-bold mb-2">Классический каменный дом</h3>
-                                <p class="opacity-80 mb-4 text-sm sm:text-base">Двухэтажный особняк с мансардой, общей площадью 250 м². Материалы: керамический кирпич, натуральный камень</p>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Классический каменный дом</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Двухэтажный особняк с мансардой, общей площадью 250 м². Материалы: керамический кирпич, натуральный камень</p>
+                                </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-amber-500">4.500.000 руб.</span>
                                     <button class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-full transition duration-300 text-sm min-h-[40px]">
@@ -440,60 +461,70 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const items = Array.from(document.querySelectorAll('.slider-item'));
-        
+        const itemCount = items.length;
         let currentIndex = 0;
         let isAnimating = false;
         
-        const getItemWidth = () => {
-            return document.querySelector('.slider-item').offsetWidth + 32;
+        // Клонирование элементов для бесконечной прокрутки
+        const cloneFirstItems = () => {
+            const firstItem = items[0].cloneNode(true);
+            const secondItem = items[1].cloneNode(true);
+            sliderTrack.appendChild(firstItem);
+            sliderTrack.appendChild(secondItem);
         };
-        
-        const updateSliderPosition = () => {
+        cloneFirstItems();
+
+        const getItemWidth = () => {
+            return items[0].offsetWidth + 32;
+        };
+
+        const updateSliderPosition = (instant = false) => {
             if(isAnimating) return;
             isAnimating = true;
+            
+            if(instant) {
+                sliderTrack.style.transition = 'none';
+            } else {
+                sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+            }
             
             sliderTrack.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
             
             setTimeout(() => {
                 isAnimating = false;
                 
-                if(currentIndex >= items.length) {
+                // Бесконечная прокрутка
+                if(currentIndex >= itemCount) {
                     currentIndex = 0;
-                    sliderTrack.style.transition = 'none';
-                    sliderTrack.style.transform = `translateX(0)`;
-                    setTimeout(() => {
-                        sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-                    }, 10);
+                    updateSliderPosition(true);
                 }
                 
                 if(currentIndex < 0) {
-                    currentIndex = items.length - 1;
-                    sliderTrack.style.transition = 'none';
-                    sliderTrack.style.transform = `translateX(-${items.length * getItemWidth()}px)`;
-                    setTimeout(() => {
-                        sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-                        currentIndex = items.length - 1;
-                    }, 10);
+                    currentIndex = itemCount - 1;
+                    updateSliderPosition(true);
                 }
             }, 500);
         };
-        
+
         nextBtn.addEventListener('click', () => {
+            if(isAnimating) return;
             currentIndex++;
             updateSliderPosition();
         });
-        
+
         prevBtn.addEventListener('click', () => {
+            if(isAnimating) return;
             currentIndex--;
             updateSliderPosition();
         });
-        
+
+        // Обработка изменения размера окна
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            sliderTrack.style.transition = 'none';
-            sliderTrack.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
-            setTimeout(() => {
-                sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-            }, 10);
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateSliderPosition(true);
+            }, 100);
         });
 
         // Smooth scroll
