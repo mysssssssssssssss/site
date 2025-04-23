@@ -33,8 +33,9 @@
         }
         .project-image {
             height: 200px;
-            object-fit: cover;
             width: 100%;
+            object-fit: contain;
+            background: #1e293b;
             border-radius: 8px 8px 0 0;
         }
         .modal {
@@ -97,8 +98,7 @@
         }
         .slider-track {
             display: flex;
-            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            will-change: transform;
+            transition: transform 0.5s ease;
         }
         .slider-item {
             flex: 0 0 calc(50% - 2rem);
@@ -147,10 +147,10 @@
         .service-item {
             padding: 1.5rem;
             border-radius: 8px;
-            min-height: 260px; /* Adjusted for larger text */
+            min-height: 260px;
         }
         .service-item h3 {
-            font-size: 1.5rem; /* Increased for readability */
+            font-size: 1.5rem;
             font-weight: bold;
             color: #22c55e;
             margin-bottom: 1rem;
@@ -160,7 +160,7 @@
             padding-left: 1.5rem;
         }
         .service-item li {
-            font-size: 1rem; /* Increased for readability */
+            font-size: 1rem;
             color: #94a3b8;
             margin-bottom: 0.5rem;
             line-height: 1.5;
@@ -188,13 +188,13 @@
                 padding: 1rem;
             }
             .service-item h3 {
-                font-size: 1.25rem; /* Adjusted for mobile */
+                font-size: 1.25rem;
             }
             .service-item li {
-                font-size: 0.875rem; /* Adjusted for mobile */
+                font-size: 0.875rem;
             }
             .service-item {
-                min-height: 220px; /* Adjusted for mobile */
+                min-height: 220px;
             }
         }
         .footer-block {
@@ -334,12 +334,12 @@
                     <!-- Project 1 -->
                     <div class="slider-item">
                         <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Одноэтажный дом" class="project-image">
                             <div class="card-content">
                                 <div class="card-text">
-                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока</h3>
-                                    <p class="opacity-80 text-sm sm:text-base">Эскизный проект Индивидуального одноэтажного жилого дома из газоблока 300мм, утепления 100мм и декоративной штукатурки типа "Короед".</p>
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Эскизный проект одноэтажного дома</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Проект одноэтажного жилого дома из газоблока 300мм, с утеплением 100мм и декоративной штукатуркой "Короед".</p>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-green-500">1.500.000 руб.</span>
@@ -354,12 +354,12 @@
                     <!-- Project 2 -->
                     <div class="slider-item">
                         <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
-                            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Двухэтажный дом" class="project-image">
                             <div class="card-content">
                                 <div class="card-text">
-                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Проект двухэтажного коттеджа с гаражом</h3>
-                                    <p class="opacity-80 text-sm sm:text-base">Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением. Материалы: кирпич, утепление, вентилируемый фасад.</p>
+                                    <h3 class="text-lg sm:text-xl font-bold mb-2">Двухэтажный коттедж с гаражом</h3>
+                                    <p class="opacity-80 text-sm sm:text-base">Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением.</p>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-green-500">2.800.000 руб.</span>
@@ -374,12 +374,12 @@
                     <!-- Project 3 -->
                     <div class="slider-item">
                         <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
-                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
                                  alt="Современный дом" class="project-image">
                             <div class="card-content">
                                 <div class="card-text">
                                     <h3 class="text-lg sm:text-xl font-bold mb-2">Современный дом с плоской крышей</h3>
-                                    <p class="opacity-80 text-sm sm:text-base">Минималистичный дизайн, панорамное остекление, использование современных материалов. Площадь 180 м²</p>
+                                    <p class="opacity-80 text-sm sm:text-base">Минималистичный дизайн с панорамным остеклением, площадь 180 м².</p>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-green-500">3.200.000 руб.</span>
@@ -394,12 +394,12 @@
                     <!-- Project 4 -->
                     <div class="slider-item">
                         <div class="matte-card-dark rounded-xl overflow-hidden hover-scale h-full">
-                            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Дом в классическом стиле" class="project-image">
+                            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Классический дом" class="project-image">
                             <div class="card-content">
                                 <div class="card-text">
                                     <h3 class="text-lg sm:text-xl font-bold mb-2">Классический каменный дом</h3>
-                                    <p class="opacity-80 text-sm sm:text-base">Двухэтажный особняк с мансардой, общей площадью 250 м². Материалы: керамический кирпич, натуральный камень</p>
+                                    <p class="opacity-80 text-sm sm:text-base">Двухэтажный особняк с мансардой, площадь 250 м², материалы: кирпич, натуральный камень.</p>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-xl sm:text-2xl font-bold text-green-500">4.500.000 руб.</span>
@@ -471,7 +471,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Contact Modal -->
     <div id="modal" class="modal">
         <div class="modal-content-dark" id="modalContent">
             <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-400 hover:text-white focus:outline-none transition duration-300 z-10">
@@ -531,7 +531,6 @@
 
         themeToggle.addEventListener('click', () => {
             if (body.classList.contains('dark')) {
-                // Switch to light theme
                 body.classList.remove('dark');
                 body.classList.replace('gradient-bg-dark', 'gradient-bg-light');
                 body.classList.replace('text-gray-200', 'text-gray-900');
@@ -545,7 +544,6 @@
                 });
                 themeToggle.innerHTML = '<i class="fas fa-sun text-xl sm:text-2xl"></i>';
             } else {
-                // Switch to dark theme
                 body.classList.add('dark');
                 body.classList.replace('gradient-bg-light', 'gradient-bg-dark');
                 body.classList.replace('text-gray-900', 'text-gray-200');
@@ -561,7 +559,46 @@
             }
         });
 
-        // Modal logic
+        // Main Slider logic
+        const sliderTrack = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slides = document.querySelectorAll('.slider-item');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function getSlidesPerView() {
+            return window.innerWidth > 640 ? 2 : 1;
+        }
+
+        function updateSliderPosition() {
+            const slideWidth = slides[0].offsetWidth;
+            sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const slidesPerView = getSlidesPerView();
+            if (currentIndex < totalSlides - slidesPerView) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSliderPosition();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - getSlidesPerView();
+            }
+            updateSliderPosition();
+        });
+
+        window.addEventListener('resize', updateSliderPosition);
+        updateSliderPosition();
+
+        // Contact Modal logic
         const modal = document.getElementById('modal');
         const closeModalBtn = document.getElementById('closeModalBtn');
         const showPhoneBtn = document.getElementById('showPhoneBtn');
@@ -606,7 +643,6 @@
         let projectCurrentIndex = 0;
         let projectImages = [];
 
-        // Function to open project modal with data
         function openProjectModal(projectData) {
             projectTitle.textContent = projectData.title;
             projectDescription.textContent = projectData.description;
@@ -636,14 +672,12 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // Function to update project slider position
         function updateProjectSliderPosition(instant = false) {
             const itemWidth = projectSliderTrack.children[0].offsetWidth;
             projectSliderTrack.style.transition = instant ? 'none' : 'transform 0.5s ease';
             projectSliderTrack.style.transform = `translateX(-${projectCurrentIndex * itemWidth}px)`;
         }
 
-        // Event listeners for project slider
         projectNextBtn.addEventListener('click', () => {
             if (projectCurrentIndex < projectImages.length - 1) {
                 projectCurrentIndex++;
@@ -658,7 +692,6 @@
             }
         });
 
-        // Close project modal
         closeProjectModalBtn.addEventListener('click', () => {
             projectModal.style.display = 'none';
             document.body.style.overflow = 'auto';
@@ -674,8 +707,8 @@
         // Project data
         const projects = [
             {
-                title: 'Эскизный проект Индивидуального одноэтажного жилого дома из газоблока',
-                description: 'Эскизный проект Индивидуального одноэтажного жилого дома из газоблока 300мм, утепления 100мм и декоративной штукатурки типа "Короед".',
+                title: 'Эскизный проект одноэтажного дома',
+                description: 'Проект одноэтажного жилого дома из газоблока 300мм, с утеплением 100мм и декоративной штукатуркой "Короед".',
                 characteristics: ['Площадь: 120 м²', 'Материал: газоблок', 'Утепление: 100мм'],
                 price: '1.500.000 руб.',
                 images: [
@@ -684,8 +717,8 @@
                 ]
             },
             {
-                title: 'Проект двухэтажного коттеджа с гаражом',
-                description: 'Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением. Материалы: кирпич, утепление, вентилируемый фасад.',
+                title: 'Двухэтажный коттедж с гаражом',
+                description: 'Современный проект двухэтажного дома с гаражом на 2 машины, террасой и панорамным остеклением.',
                 characteristics: ['Площадь: 200 м²', 'Материал: кирпич', 'Гараж: на 2 машины'],
                 price: '2.800.000 руб.',
                 images: [
@@ -695,7 +728,7 @@
             },
             {
                 title: 'Современный дом с плоской крышей',
-                description: 'Минималистичный дизайн, панорамное остекление, использование современных материалов. Площадь 180 м²',
+                description: 'Минималистичный дизайн с панорамным остеклением, площадь 180 м².',
                 characteristics: ['Площадь: 180 м²', 'Крыша: плоская', 'Остекление: панорамное'],
                 price: '3.200.000 руб.',
                 images: [
@@ -705,7 +738,7 @@
             },
             {
                 title: 'Классический каменный дом',
-                description: 'Двухэтажный особняк с мансардой, общей площадью 250 м². Материалы: керамический кирпич, натуральный камень',
+                description: 'Двухэтажный особняк с мансардой, площадь 250 м², материалы: кирпич, натуральный камень.',
                 characteristics: ['Площадь: 250 м²', 'Материал: кирпич', 'Мансарда: есть'],
                 price: '4.500.000 руб.',
                 images: [
@@ -715,7 +748,6 @@
             }
         ];
 
-        // Attach event listeners to "Подробнее" buttons
         document.querySelectorAll('.project-details-btn').forEach((btn, index) => {
             btn.addEventListener('click', () => {
                 openProjectModal(projects[index]);
